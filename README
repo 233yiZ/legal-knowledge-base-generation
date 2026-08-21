@@ -6,22 +6,21 @@ This repository contains the supplementary materials for the submitted manuscrip
 Contents
 This repository provides the legal knowledge base used in our experiments, along with the code used to generate and validate it. Specifically, it includes:
 
-knowledge_base_samples/: A sample of the validated legal knowledge entries (full knowledge base available upon request or after publication).
+knowledge_base/: A sample of the validated legal knowledge entries (full knowledge base available upon request or after publication).
 
 generation/: API calling scripts for generating initial legal knowledge using LLMs (Qwen3-235B-A22B).
 
 validation/: The evaluation rubric and validation protocol used by our legal experts.
 
-examples/: Representative examples of accepted, revised, and rejected knowledge entries, with expert modification details.
-
 Knowledge Base Format
 Each knowledge entry is structured as:
 
-text
 {
-  "definition": "...",
-  "constituent_elements": "...",
-  "judicial_interpretations": "..."
+  "Charge_ID": "...",
+  "Charge_NAME": "...",
+  "Definition": "...",
+  "Constituent_elements": "...",
+  "Judicial_interpretations": "..."
 }
 Note: Charge names are explicitly excluded from the knowledge entries to prevent label leakage during retriever training.
 
