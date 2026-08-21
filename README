@@ -1,0 +1,41 @@
+Supplementary Materials for [Paper ID: XXXX]
+⚠️ Important Notice for Reviewers
+
+This repository contains the supplementary materials for the submitted manuscript. To preserve the integrity of the double-blind review process, this repository is hosted under an anonymous account.
+
+Contents
+This repository provides the legal knowledge base used in our experiments, along with the code used to generate and validate it. Specifically, it includes:
+
+knowledge_base_samples/: A sample of the validated legal knowledge entries (full knowledge base available upon request or after publication).
+
+generation/: API calling scripts for generating initial legal knowledge using LLMs (Qwen3-235B-A22B).
+
+validation/: The evaluation rubric and validation protocol used by our legal experts.
+
+examples/: Representative examples of accepted, revised, and rejected knowledge entries, with expert modification details.
+
+Knowledge Base Format
+Each knowledge entry is structured as:
+
+text
+{
+  "definition": "...",
+  "constituent_elements": "...",
+  "judicial_interpretations": "..."
+}
+Note: Charge names are explicitly excluded from the knowledge entries to prevent label leakage during retriever training.
+
+Generating Knowledge Entries
+To reproduce the knowledge generation process:
+
+bash
+python generate_knowledge.py --model qwen3-235b-a22b --charges charges.txt --output knowledge_raw.json
+The script requires an API key for the LLM service. The prompt template used for generation is provided in prompts/prompt_template.txt.
+
+Validated Knowledge Base
+The sample entries in knowledge_base_samples/ have been validated by three legal experts following the protocol described in the manuscript (Appendix A). The validation criteria and inter-rater agreement statistics are also provided.
+
+Contact
+For questions regarding the knowledge base or the generation code, please open an issue in this repository.
+
+Note: This is a preliminary release for review purposes. The complete knowledge base and the full model implementation will be released upon acceptance.
