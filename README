@@ -16,11 +16,11 @@ Knowledge Base Format
 Each knowledge entry is structured as:
 
 {
-  "Charge_ID": "...",
-  "Charge_NAME": "...",
-  "Definition": "...",
-  "Constituent_elements": "...",
-  "Judicial_interpretations": "..."
+  "id": "...",
+  "charge_name": "...",
+  "definition": "...",
+  "constituent_elements": "...",
+  "judicial_interpretations": "..."
 }
 Note: Charge names are explicitly excluded from the knowledge entries to prevent label leakage during retriever training.
 
