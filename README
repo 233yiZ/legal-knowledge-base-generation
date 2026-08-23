@@ -8,7 +8,7 @@ This repository provides the legal knowledge base used in our experiments, along
 
 knowledge_base/: A sample of the validated legal knowledge entries (full knowledge base available upon request or after publication).
 
-generation/: API calling scripts for generating initial legal knowledge using LLMs (Qwen3-235B-A22B).
+construction/: API calling scripts for generating initial legal knowledge using LLMs (Qwen3-235B-A22B).
 
 validation/: The evaluation rubric and validation protocol used by our legal experts.
 
